@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio - Self-Taught Journey</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="port.css"> 
+</head>
+<body>
+    <!-- Red progress bar at top of page -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- ============================================
+         HEADER SECTION (Top of page)
+         ============================================ -->
+    <header>
+        <div class="container">
+            <div class="hero-content">
+                <!-- Left side: Your name and intro -->
+                <div class="hero-text">
+                    <h1>
+                        Self-Taught
+                        <span class="highlight">Developer</span>
+                    </h1>
+                    <p class="tagline">Transforming curiosity into code, one project at a time</p>
+                    
+                    <!-- Stats: 3+ Technologies, 100% Self-Taught, etc. -->
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Self-Taught</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Potential</div>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+
+                <!-- Right side: Profile box -->
+                <div class="hero-visual">
+                    <div class="decorative-box">
+                        <div class="profile-content">
+                            <div class="code-badge">&lt;/developer&gt;</div>
+                            <h2 class="profile-title">Full Stack Explorer</h2>
+                            <p class="profile-birth">Born: November 22, 1988</p>
+                            <p style="color: var(--light-text-color); margin-bottom: 20px;">
+                                From non-tech background to building web applications
+                            </p>
+                            <!-- Tech tags -->
+                            <div class="tech-stack">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================
+         ABOUT SECTION
+         ============================================ -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">My Story</div>
+                <h2 class="section-title">From Zero to Developer</h2>
+            </div>
+
+            <div class="about-content">
+                <!-- Left side: Your story -->
+                <div class="about-text">
+                    <p>
+                        <strong>Every expert was once a beginner.</strong> I started my journey into web development without any technical background, armed only with curiosity and determination. What began as self-teaching HTML has evolved into building complete web applications.
+                    </p>
+                    <p>
+                        I've independently mastered <strong>HTML, CSS, and JavaScript</strong>, learning through hands-on projects and problem-solving. Currently expanding my skills with <strong>SQL basics</strong> and actively building projects on GitHub to showcase real-world applications.
+                    </p>
+                    <p>
+                        My non-tech background gives me a unique perspective: I understand the user experience from a beginner's mindset, and I approach problems with fresh thinking unconstrained by traditional programming conventions.
+                    </p>
+                </div>
+
+                <!-- Right side: What drives you -->
+                <div class="highlight-box">
+                    <h3>What Drives Me</h3>
+                    <ul class="quality-list">
+                        <li>Quick learner who thrives on challenges</li>
+                        <li>Self-motivated and disciplined</li>
+                        <li>Strong problem-solving mindset</li>
+                        <li>Passion for clean, functional code</li>
+                        <li>Continuous growth and learning</li>
+                        <li>User-focused development approach</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SKILLS SECTION
+         ============================================ -->
+    <section class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Expertise</div>
+                <h2 class="section-title">Technical Skills</h2>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Skill Card 1 -->
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Frontend Development</h3>
+                    <p>Building responsive, interactive user interfaces with modern HTML5, CSS3, and vanilla JavaScript. Focus on clean code and seamless user experiences.</p>
+                    <div class="skill-level">Self-Taught Mastery</div>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3>JavaScript</h3>
+                    <p>Proficient in ES6+ features, DOM manipulation, event handling, and creating dynamic web applications. Continuously exploring modern JavaScript patterns.</p>
+                    <div class="skill-level">Actively Developing</div>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>SQL Basics</h3>
+                    <p>Understanding database fundamentals, writing queries, and managing data. Currently expanding knowledge of relational databases and data structures.</p>
+                    <div class="skill-level">Learning & Growing</div>
+                </div>
+
+                <!-- Skill Card 4 -->
+                <div class="skill-card">
+                    <div class="skill-icon">🚀</div>
+                    <h3>Problem Solving</h3>
+                    <p>Analytical approach to breaking down complex problems. Quick to learn new technologies and adapt to different development challenges.</p>
+                    <div class="skill-level">Core Strength</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PROJECTS SECTION (Dark background)
+         ============================================ -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Work</div>
+                <h2 class="section-title">Building & Learning</h2>
+            </div>
+
+            <div class="project-showcase">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-number">01</div>
+                    <h3>Active GitHub Portfolio</h3>
+                    <p>
+                        Currently building and sharing projects on GitHub, demonstrating practical application of HTML, CSS, and JavaScript. Each project represents a new learning milestone and problem-solving challenge.
+                    </p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Git</span>
+                    </div>
+                    <a href="https://github.com" class="project-link">View on GitHub →</a>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-number">02</div>
+                    <h3>Self-Learning Journey</h3>
+                    <p>
+                        Completed comprehensive self-study of web fundamentals, from basic HTML structure to advanced CSS layouts and interactive JavaScript functionality. Continuously expanding skillset through real projects.
+                    </p>
+                    <div class="project-tech">
+                        <span>Self-Taught</span>
+                        <span>Web Development</span>
+                        <span>Database Basics</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-number">03</div>
+                    <h3>Database Learning Path</h3>
+                    <p>
+                        Currently mastering SQL fundamentals, understanding relational databases, writing queries, and learning how to integrate backend data with frontend applications.
+                    </p>
+                    <div class="project-tech">
+                        <span>SQL</span>
+                        <span>Database Design</span>
+                        <span>Data Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION
+         ============================================ -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Let's Connect</div>
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
+
+            <div class="contact-content">
+                <p>
+                    I'm always eager to learn, collaborate, and take on new challenges. Whether you have a project in mind, want to discuss opportunities, or just want to connect with a fellow developer, I'd love to hear from you!
+                </p>
+
+                <!-- Contact info with icons -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <a href="mailto:your.email@example.com">your.email@example.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <a href="https://github.com" target="_blank">github.com/yourusername</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🔗</div>
+                        <a href="https://linkedin.com" target="_blank">LinkedIn Profile</a>
+                    </div>
+                </div>
+
+                <!-- Contact buttons -->
+                <div class="cta-buttons">
+                    <a href="mailto:your.email@example.com" class="btn btn-primary">Send Message</a>
+                    <a href="https://github.com" target="_blank" class="btn btn-secondary">View GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2024 <strong>Self-Taught Developer</strong> | Built with passion and dedication</p>
+                <p style="margin-top: 10px; font-size: 0.85rem;">From non-tech background to full-stack development • Always learning, always growing</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to your JavaScript file -->
+    <script src="port.js"></script>
+</body>
+</html>
