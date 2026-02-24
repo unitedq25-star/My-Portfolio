@@ -1,0 +1,115 @@
+// ============================================
+// PORTFOLIO WEBSITE JAVASCRIPT
+// Easy to understand and modify
+// ============================================
+
+// === SCROLL PROGRESS BAR ===
+// Shows a red bar at the top that grows as you scroll down the page
+
+window.addEventListener('scroll', () => {
+    // Get total scrollable height of the page
+    const totalPageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    
+    // Calculate how far we've scrolled (0% to 100%)
+    const howFarScrolled = (window.scrollY / totalPageHeight) * 100;
+    
+    // Update the width of the red progress bar at the top
+    document.getElementById('progressBar').style.width = howFarScrolled + '%';
+});
+
+
+// === SMOOTH SCROLLING ===
+// When you click links like "#projects" or "#contact", 
+// the page scrolls smoothly instead of jumping instantly
+
+// Find all links that start with "#" (internal page links)
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    
+    // Add click event to each link
+    link.addEventListener('click', function (event) {
+        event.preventDefault(); // Stop the default jump behavior
+        
+        // Find which section the link points to
+        const sectionToScrollTo = document.querySelector(this.getAttribute('href'));
+        
+        // If the section exists, scroll to it smoothly
+        if (sectionToScrollTo) {
+            sectionToScrollTo.scrollIntoView({
+                behavior: 'smooth', // Makes it scroll smoothly
+                block: 'start'      // Aligns to the top of the section
+            });
+        }
+    });
+});
+
+
+// === FADE IN ANIMATION ON SCROLL ===
+// Makes skill cards and project cards fade in as you scroll down to them
+
+// Settings for when to trigger the fade-in animation
+const animationSettings = {
+    threshold: 0.1,                    // Trigger when 10% of the card is visible
+    rootMargin: '0px 0px -100px 0px'   // Start animation 100px before the card reaches bottom
+};
+
+// Create an "animation watcher" that watches for cards entering the screen
+const animationWatcher = new IntersectionObserver((items) => {
+    
+    // Loop through each item that the watcher is tracking
+    items.forEach(item => {
+        
+        // Check if the item is now visible on screen
+        if (item.isIntersecting) {
+            
+            // Make the card visible by fading it in
+            item.target.style.opacity = '1';           // Change from invisible to visible
+            item.target.style.transform = 'translateY(0)';  // Move from below to normal position
+        }
+    });
+    
+}, animationSettings);
+
+// Find all skill cards and project cards on the page
+document.querySelectorAll('.skill-card, .project-card').forEach(card => {
+    
+    // Set initial state: cards start invisible and slightly below their final position
+    card.style.opacity = '0';                    // Start invisible
+    card.style.transform = 'translateY(30px)';   // Start 30px lower
+    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';  // Smooth animation
+    
+    // Tell the animation watcher to watch this card
+    animationWatcher.observe(card);
+});
+
+
+// ============================================
+// HOW TO ADD MORE FEATURES
+// ============================================
+
+/*
+  Want to add more JavaScript features? Here are some ideas:
+
+  1. BUTTON CLICK COUNTER
+     Track how many times a button is clicked:
+     
+     document.querySelector('.btn-primary').addEventListener('click', () => {
+         console.log('Button clicked!');
+     });
+
+  2. HIDE/SHOW SECTIONS
+     Toggle visibility of sections:
+     
+     const toggleButton = document.querySelector('#toggle-btn');
+     const section = document.querySelector('.about-section');
+     
+     toggleButton.addEventListener('click', () => {
+         section.style.display = section.style.display === 'none' ? 'block' : 'none';
+     });
+
+  3. CHANGE COLORS ON CLICK
+     Change page colors with a button:
+     
+     document.querySelector('#color-btn').addEventListener('click', () => {
+         document.documentElement.style.setProperty('--red-accent-color', '#3498db');
+     });
+*/
