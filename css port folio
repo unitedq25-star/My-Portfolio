@@ -1,0 +1,721 @@
+/* ============================================
+   PORTFOLIO WEBSITE STYLES
+   Easy to read and modify CSS
+   ============================================ */
+
+/* === COLOR VARIABLES === */
+/* Change these to change the entire color scheme! */
+:root {
+    /* Main Colors - Easy to change! */
+    --main-text-color: #322727;        /* Black text */
+    --background-color: #ba8f1b;       /* Cream background */
+    --red-accent-color: #0e0912;       /* Red for buttons and highlights */
+    --light-red-color: #130804f4;        /* Lighter red */
+    --light-text-color: #1a1b11;       /* Gray text */
+    --border-line-color: hsl(45, 55%, 4%);      /* Border lines */
+}
+
+/* === RESET BROWSER DEFAULTS === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === BASIC PAGE SETUP === */
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--background-color);
+    color: black(--main-text-color);
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    line-height: 1.6; /* Space between lines of text */
+}
+
+/* === ANIMATED BACKGROUND PATTERN === */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(0,0,0,0.01) 2px,
+            rgba(0,0,0,0.01) 4px
+        );
+    pointer-events: none; /* Allows clicking through */
+    z-index: 1;
+    animation: subtleMove 20s linear infinite;
+}
+
+@keyframes subtleMove {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(4px); }
+}
+
+/* === MAIN CONTAINER === */
+/* Centers everything on the page */
+.container {
+    max-width: 1400px; /* Maximum width of content */
+    margin: 0 auto; /* Centers the container */
+    padding: 0 40px; /* Space on left and right */
+    position: relative;
+    z-index: 2;
+}
+
+/* ============================================
+   HEADER / TOP SECTION
+   ============================================ */
+
+header {
+    min-height: 100vh; /* Takes full screen height */
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    position: relative;
+    padding: 60px 0; /* Space on top and bottom */
+}
+
+/* Two-column layout for intro section */
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 80px; /* Space between columns */
+    align-items: center;
+}
+
+/* === LEFT SIDE - MAIN HEADING === */
+.hero-text h1 {
+    font-family: 'Crimson Pro', serif;
+    font-size: clamp(3rem, 8vw, 7rem); /* Responsive size */
+    font-weight: 900; /* Very bold */
+    line-height: 0.95; /* Lines close together */
+    margin-bottom: 30px;
+    letter-spacing: -0.03em; /* Letters slightly closer */
+    animation: slideUpAndFadeIn 0.8s ease-out;
+}
+
+/* The highlighted "Developer" word */
+.hero-text h1 .highlight {
+    color: var(--red-accent-color);
+    display: block;
+    font-style: italic;
+    position: relative;
+}
+
+/* Red underline effect for highlighted text */
+.hero-text h1 .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: var(--red-accent-color);
+    opacity: 0.2; /* Semi-transparent */
+    z-index: -1; /* Behind text */
+}
+
+/* Tagline under heading */
+.tagline {
+    font-size: 1.3rem;
+    color: var(--light-text-color);
+    font-weight: 500;
+    margin-bottom: 40px;
+    animation: slideUpAndFadeIn 0.8s ease-out 0.2s both;
+}
+
+/* === STATS (3+, 100%, ∞) === */
+.hero-stats {
+    display: flex;
+    gap: 60px; /* Space between stats */
+    margin-bottom: 50px;
+    animation: slideUpAndFadeIn 0.8s ease-out 0.4s both;
+}
+
+.stat {
+    position: relative;
+}
+
+/* Red line above each stat */
+.stat::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--red-accent-color);
+}
+
+.stat-number {
+    font-family: 'Crimson Pro', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--main-text-color);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+    text-transform: uppercase; /* ALL CAPS */
+    letter-spacing: 0.1em;
+    margin-top: 8px;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+/* Button container */
+.cta-buttons {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+    animation: slideUpAndFadeIn 0.8s ease-out 0.6s both;
+}
+
+/* Basic button style - applies to all buttons */
+.btn {
+    padding: 18px 40px; /* Space inside button */
+    font-size: 1rem;
+    font-weight: 600; /* Semi-bold text */
+    text-decoration: none; /* No underline */
+    border: none;
+    cursor: pointer; /* Hand pointer on hover */
+    transition: all 0.3s ease; /* Smooth animation */
+    text-transform: uppercase; /* ALL CAPS */
+    letter-spacing: 0.1em; /* Space between letters */
+    font-size: 0.9rem;
+}
+
+/* Red button (primary action) */
+.btn-primary {
+    background: var(--red-accent-color);
+    color: white;
+    box-shadow: 0 4px 20px rgb(190, 100, 59); /* Soft shadow */
+}
+
+/* Red button on hover */
+.btn-primary:hover {
+    background: #1a1c0cd2; /* Darker red */
+    transform: translateY(-2px); /* Moves up slightly */
+    box-shadow: 0 6px 30px rgba(214, 48, 49, 0.4); /* Bigger shadow */
+}
+
+/* Outline button (secondary action) */
+.btn-secondary {
+    background: transparent; /* No background */
+    color: var(--main-text-color);
+    border: 2px solid var(--main-text-color); /* Black outline */
+}
+
+/* Outline button on hover */
+.btn-secondary:hover {
+    background: var(--main-text-color); /* Fills with black */
+    color: var(--background-color); /* Text turns light */
+    transform: translateY(-2px); /* Moves up slightly */
+}
+
+/* ============================================
+   RIGHT SIDE - PROFILE BOX
+   ============================================ */
+
+.hero-visual {
+    position: relative;
+    animation: simplyFadeIn 1s ease-out 0.3s both;
+}
+
+/* Decorative box with shadow */
+.decorative-box {
+    position: relative;
+    padding: 40px;
+    background: rgb(150, 87, 56);
+    border: 3px solid var(--main-text-color);
+    box-shadow: 20px 20px 0 var(--red-accent-color); /* Offset shadow */
+    transition: all 0.4s ease;
+}
+
+.decorative-box:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 25px 25px 0 var(--red-accent-color);
+}
+
+.profile-content {
+    text-align: center;
+}
+
+/* Code badge at top */
+.code-badge {
+    display: inline-block;
+    background: var(--main-text-color);
+    color: var(--background-color);
+    padding: 8px 20px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+}
+
+.profile-title {
+    font-family: 'Crimson Pro', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.profile-birth {
+    color: var(--light-text-color);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* Tech tags (HTML, CSS, JS, SQL) */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.tech-tag {
+    padding: 8px 16px;
+    background: var(--background-color);
+    border: 1px solid var(--border-line-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    border-color: var(--red-accent-color);
+    color: var(--red-accent-color);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+
+.about-section {
+    padding: 120px 0;
+    background: rgb(222, 184, 123);
+    border-top: 3px solid var(--main-text-color);
+    border-bottom: 3px solid var(--main-text-color);
+}
+
+/* Section headers (used in all sections) */
+.section-header {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.section-label {
+    font-size: 0.9rem;
+    color: var(--red-accent-color);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-family: 'Crimson Pro', serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+/* Two-column layout for about content */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.about-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: black(--light-text-color);
+}
+
+.about-text p {
+    margin-bottom: 25px;
+}
+
+.about-text strong {
+    color: var(--main-text-color);
+    font-weight: 600;
+}
+
+/* Highlight box on the right */
+.highlight-box {
+    background: var(--background-color);
+    padding: 40px;
+    border-left: 5px solid var(--red-accent-color);
+}
+
+.highlight-box h3 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--main-text-color);
+}
+
+/* List of qualities */
+.quality-list {
+    list-style: none;
+}
+
+.quality-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-line-color);
+    font-size: 1.05rem;
+    position: relative;
+    padding-left: 30px;
+}
+
+.quality-list li:last-child {
+    border-bottom: none;
+}
+
+/* Arrow before each list item */
+.quality-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--red-accent-color);
+    font-weight: bold;
+}
+
+/* ============================================
+   SKILLS SECTION
+   ============================================ */
+
+.skills-section {
+    padding: 120px 0;
+}
+
+/* Grid of skill cards */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+/* Individual skill card */
+.skill-card {
+    background: rgba(21, 10, 10, 0.638);
+    padding: 40px;
+    border: 2px solid var(--border-line-color);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Red line that appears on hover */
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 0;
+    background: Cream(rgb 150,86,56);
+    transition: height 0.3s ease;
+}
+
+.skill-card:hover {
+    border-color: var(--red-accent-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.skill-card:hover::before {
+    height: 100%; /* Red line grows to full height */
+}
+
+.skill-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.skill-card h3 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: black(--main-text-color);
+}
+
+.skill-card p {
+    color: black(--light-text-color);
+    line-height: 1.6;
+}
+
+.skill-level {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: var(--red-accent-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* ============================================
+   PROJECTS SECTION (DARK BACKGROUND)
+   ============================================ */
+
+.projects-section {
+    padding: 120px 0;
+    background: var(--main-text-color); /* Dark background */
+    color: var(--background-color); /* Light text */
+}
+
+.projects-section .section-label {
+    color: var(--light-red-color);
+}
+
+.projects-section .section-title {
+    color: var(--background-color);
+}
+
+.project-showcase {
+    display: grid;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+/* Individual project card */
+.project-card {
+    background: rgba(255,255,255,0.05);
+    border: 2px solid rgba(255,255,255,0.1);
+    padding: 50px;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.project-card:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: var(--red-accent-color);
+    transform: translateX(10px); /* Slides to the right */
+}
+
+/* Large number in background */
+.project-number {
+    font-family: 'Crimson Pro', serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgba(255,255,255,0.1);
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    line-height: 1;
+}
+
+.project-card h3 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: black(--background-color);
+}
+
+.project-card p {
+    color: rgba(18, 15, 15, 0.7);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Tech tags in projects */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.project-tech span {
+    padding: 6px 14px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    font-size: 0.85rem;
+    color: var(--background-color);
+}
+
+/* GitHub link */
+.project-link {
+    color: var(--light-red-color);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.3s ease;
+}
+
+.project-link:hover {
+    gap: 15px; /* Arrow moves away on hover */
+}
+
+/* ============================================
+   CONTACT SECTION
+   ============================================ */
+
+.contact-section {
+    padding: 120px 0;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-content p {
+    font-size: 1.3rem;
+    color: var(--light-text-color);
+    margin-bottom: 50px;
+    line-height: 1.8;
+}
+
+/* Contact icons and links */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.contact-item a {
+    color: var(--main-text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--red-accent-color);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+    padding: 60px 0;
+    background: var(--main-text-color);
+    color: var(--background-color);
+    text-align: center;
+}
+
+.footer-content {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.6);
+}
+
+.footer-content strong {
+    color: var(--background-color);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+/* Slide up and fade in animation */
+@keyframes slideUpAndFadeIn {
+    from {
+        opacity: 0; /* Start invisible */
+        transform: translateY(30px); /* Start 30px lower */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+/* Simple fade in animation */
+@keyframes simplyFadeIn {
+    from { 
+        opacity: 0; /* Start invisible */
+    }
+    to { 
+        opacity: 1; /* End fully visible */
+    }
+}
+
+/* ============================================
+   SCROLL PROGRESS BAR
+   ============================================ */
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: var(--red-accent-color);
+    z-index: 1000;
+    transition: width 0.1s ease;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN (MOBILE)
+   ============================================ */
+
+@media (max-width: 968px) {
+    .container {
+        padding: 0 25px;
+    }
+
+    /* Stack columns on mobile */
+    .hero-content,
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-stats {
+        gap: 40px;
+    }
+
+    .decorative-box {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    /* Stack buttons vertically */
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    /* Single column for skills */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Smaller project numbers on mobile */
+    .project-number {
+        font-size: 3rem;
+        top: 15px;
+        right: 20px;
+    }
+}
