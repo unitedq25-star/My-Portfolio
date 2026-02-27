@@ -465,9 +465,7 @@ header {
     letter-spacing: 0.1em;
 }
 
-/* ============================================
-   PROJECTS SECTION (DARK BACKGROUND)
-   ============================================ */
+/* PROJECTS SECTION (DARK BACKGROUND) */
 
 .projects-section {
     padding: 120px 0;
@@ -561,9 +559,7 @@ header {
     gap: 15px; /* Arrow moves away on hover */
 }
 
-/* ============================================
-   CONTACT SECTION
-   ============================================ */
+/* CONTACT ME */
 
 .contact-section {
     padding: 120px 0;
@@ -631,11 +627,9 @@ footer {
     color: var(--background-color);
 }
 
-/* ============================================
-   ANIMATIONS
-   ============================================ */
+/* ANIMATIONS */
 
-/* Slide up and fade in animation */
+/* Slide up and fade moving */
 @keyframes slideUpAndFadeIn {
     from {
         opacity: 0; /* Start invisible */
