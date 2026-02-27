@@ -1,7 +1,5 @@
-/* ============================================
-   PORTFOLIO WEBSITE STYLES
-   Easy to read and modify CSS
-   ============================================ */
+/* PORTFOLIO WEBSITE STYLES
+   Easy to read and modify CSS*/
 
 /* === COLOR VARIABLES === */
 /* Change these to change the entire color scheme! */
@@ -119,7 +117,7 @@ header {
     z-index: -1; /* Behind text */
 }
 
-/* Tagline under heading */
+/* this is a tagline under heading */
 .tagline {
     font-size: 1.3rem;
     color: var(--light-text-color);
@@ -438,7 +436,7 @@ header {
 }
 
 .skill-card:hover::before {
-    height: 100%; /* Red line grows to full height */
+    height: 100%; 
 }
 
 .skill-icon {
