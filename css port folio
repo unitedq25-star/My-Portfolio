@@ -13,7 +13,7 @@
     --border-line-color: hsl(45, 55%, 4%);      /* Border lines */
 }
 
-/* === RESET BROWSER DEFAULTS === */
+/* RESET BROWSER DEFAULTS */
 * {
     margin: 0;
     padding: 0;
@@ -65,16 +65,15 @@ body::before {
     z-index: 2;
 }
 
-/* ============================================
-   HEADER / TOP SECTION
-   ============================================ */
+/* 
+   HEADER / TOP SECTION */
 
 header {
     min-height: 100vh; /* Takes full screen height */
     display: flex;
     align-items: center; /* Centers content vertically */
     position: relative;
-    padding: 60px 0; /* Space on top and bottom */
+    padding: 56px 0; /* Space on top and bottom */
 }
 
 /* Two-column layout for intro section */
@@ -85,7 +84,7 @@ header {
     align-items: center;
 }
 
-/* === LEFT SIDE - MAIN HEADING === */
+/*  LEFT SIDE - MAIN HEADING  */
 .hero-text h1 {
     font-family: 'Crimson Pro', serif;
     font-size: clamp(3rem, 8vw, 7rem); /* Responsive size */
@@ -165,9 +164,7 @@ header {
     margin-top: 8px;
 }
 
-/* ============================================
-   BUTTONS
-   ============================================ */
+/* BUTTONS */
 
 /* Button container */
 .cta-buttons {
