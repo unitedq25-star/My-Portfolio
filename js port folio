@@ -1,7 +1,7 @@
-// ============================================
+
 // PORTFOLIO WEBSITE JAVASCRIPT
 // Easy to understand and modify
-// ============================================
+
 
 // === SCROLL PROGRESS BAR ===
 // Shows a red bar at the top that grows as you scroll down the page
@@ -82,11 +82,8 @@ document.querySelectorAll('.skill-card, .project-card').forEach(card => {
 });
 
 
-// ============================================
-// HOW TO ADD MORE FEATURES
-// ============================================
 
-/*
+// HOW TO ADD MORE FEATURES /*
   Want to add more JavaScript features? Here are some ideas:
 
   1. BUTTON CLICK COUNTER
