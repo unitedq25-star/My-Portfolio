@@ -20,16 +20,16 @@
     box-sizing: border-box;
 }
 
-/* === BASIC PAGE SETUP === */
+/*  BASIC PAGE SETUP  */
 body {
     font-family: 'DM Sans', sans-serif;
     background: var(--background-color);
     color: black(--main-text-color);
-    overflow-x: hidden; /* Prevents horizontal scrolling */
+    overflow-x: hidden; 
     line-height: 1.6; /* Space between lines of text */
 }
 
-/* === ANIMATED BACKGROUND PATTERN === */
+/* ANIMATED BACKGROUND  */
 body::before {
     content: '';
     position: fixed;
@@ -55,7 +55,7 @@ body::before {
     100% { transform: translateY(4px); }
 }
 
-/* === MAIN CONTAINER === */
+/*  MAIN CONTAINER  */
 /* Centers everything on the page */
 .container {
     max-width: 1400px; /* Maximum width of content */
