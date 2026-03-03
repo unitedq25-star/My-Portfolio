@@ -69,13 +69,12 @@ const animationWatcher = new IntersectionObserver((items) => {
     
 }, animationSettings);
 
-// Find all skill cards and project cards on the page
+// All the skills are mentioned here i made it using arrow func//
 document.querySelectorAll('.skill-card, .project-card').forEach(card => {
-    
-    // Set initial state: cards start invisible and slightly below their final position
-    card.style.opacity = '0';                    // Start invisible
-    card.style.transform = 'translateY(30px)';   // Start 30px lower
-    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';  // Smooth animation
+ // Set initial state: cards start invisible and slightly below their final position
+card.style.opacity = '0';                    // Start invisible
+card.style.transform = 'translateY(30px)';   // Start 30px lower
+card.style.transition = 'opacity 0.7s ease, transform 0.7s ease';  // Smooth animation
     
     // Tell the animation watcher to watch this card
     animationWatcher.observe(card);
