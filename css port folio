@@ -57,7 +57,7 @@ body::before {
 
 /*  MAIN CONTAINER  */
 /* Centers everything on the page */
-.container {
+.MainBox {
     max-width: 1400px; /* Maximum width of content */
     margin: 0 auto; /* Centers the container */
     padding: 0 40px; /* Space on left and right */
