@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="port.css"> 
 </head>
 <body>
-    <!-- Red progress bar at top of page -->
+    <!--  Progress bar at the top of the page -->
     <div class="progress-bar" id="progressBar"></div>
 
     <!-- HEADER SECTION (Top of page)-->
