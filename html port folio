@@ -17,11 +17,9 @@
     <!-- Red progress bar at top of page -->
     <div class="progress-bar" id="progressBar"></div>
 
-    <!-- ============================================
-         HEADER SECTION (Top of page)
-         ============================================ -->
+    <!-- HEADER SECTION (Top of page)-->
     <header>
-        <div class="container">
+        <div class="MainBox">
             <div class="hero-content">
                 <!-- Left side: Your name and intro -->
                 <div class="hero-text">
