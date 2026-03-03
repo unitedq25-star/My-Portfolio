@@ -20,7 +20,7 @@ window.addEventListener('scroll', () => {
 
 // === SMOOTH SCROLLING ===
 // When you click links like "#projects" or "#contact", 
-// the page scrolls smoothly instead of jumping instantly
+// the page scrolls smoothly 
 
 // Find all links that start with "#" (internal page links)
 document.querySelectorAll('a[href^="#"]').forEach(link => {
