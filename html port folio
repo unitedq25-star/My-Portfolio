@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     
-    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="port.css"> 
 </head>
 <body>
@@ -116,9 +115,7 @@
         </div>
     </section>
 
-    <!-- ============================================
-         SKILLS SECTION
-         ============================================ -->
+    <!--   SKILLS SECTION -->
     <section class="skills-section">
         <div class="container">
             <div class="section-header">
