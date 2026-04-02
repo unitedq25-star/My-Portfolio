@@ -1,1 +1,23 @@
 you can see my portfolio here    https://unitedq25-star.github.io/My-Portfolio/      click the link and see my resume live
+My Journey: From Housewife to Developer  Welcome to my personal portfolio. This project is more than just code; it’s a reflection of my transition from managing
+a household to building software solutions. It showcases my technical growth and the projects I’ve built along the way.
+
+🌟 About My Story
+In this portfolio, I share my journey of how I started learning from scratch while balancing family life. It details my path through:
+
+Self-Taught Learning: How I mastered the web fundamentals.
+
+Problem Solving: Transitioning from daily tasks to logical coding challenges.
+
+The Goal: My aim to become a professional Software Engineer.
+
+Technical Skills
+Here is the toolkit I've been building:
+
+Frontend: HTML5, CSS, JavaScript 
+
+Backend & Data: SQL, Python and its libraries pandas 
+
+Tools & Version Control: Git, GitHub, VS Code
+
+Deployment: GitHub Pages 
