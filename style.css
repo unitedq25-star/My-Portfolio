@@ -73,7 +73,7 @@ header {
     display: flex;
     align-items: center; /* Centers content vertically */
     position: relative;
-    padding: 56px 0; /* Space on top and bottom */
+    padding: 56px 0;     /* Space on top and bottom */
 }
 
 /* Two-column layout for intro section */
