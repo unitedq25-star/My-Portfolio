@@ -6,8 +6,8 @@
 :root {
     /* Main Colors - Easy to change! */
     --main-text-color: #322727;        /* Black text */
-    --background-color: #ba8f1b;       /* Cream background */
-    --red-accent-color: #0e0912;       /* Red for buttons and highlights */
+    --background-color: #ba8f1b;       /* background */
+    --red-accent-color: #0e0912;       /*  for buttons and highlights */
     --light-red-color: #130804f4;        /* Lighter red */
     --light-text-color: #1a1b11;       /* Gray text */
     --border-line-color: hsl(45, 55%, 4%);      /* Border lines */
